@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function ComParametro (props) {
+export default function ComParametro(props) {
     const title = props.titulo
     const aluno = props.aluno
     const nota = props.nota
-    const situacao = nota > 7 ?  'Aprovado' : 'Recuperação'
+    const situacao = nota > 7 ? 'Aprovado' : 'Recuperação'
 
     return (
         <div>
