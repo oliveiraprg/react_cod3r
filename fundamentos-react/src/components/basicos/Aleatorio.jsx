@@ -6,6 +6,7 @@ export default function Aleatorio(props) {
 
     return (
         <div>
+            <h2>Desafio Numero Aleatorio;</h2>
             <p>Menor valor {min} maior valor {max}</p>
             <p>Resultado {aleatorio}</p>
         </div>
