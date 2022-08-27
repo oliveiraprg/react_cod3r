@@ -1,21 +1,25 @@
+import './TabelaProdutos.css'
 import React from "react";
 import produtos from '../../data/produtos';
 
 
 export default function ListaProdutos () {
     
-    const listaProdutos = produtos.map((produto) => {
-        return (
-                <tr key={produto.id}>
-                    <th>{produto.id}</th>
-                    <td>{produto.produto}</td>
-                    <td>{parseFloat(produto.preco)}</td>
-                </tr>
-        )
-    })
+    function getLinhas(){ 
+        return produtos.map((produto, i) => {
+            return (
+                    <tr key={produto.id} className={i % 2 === 0 ? 'Par': 'Impar'}>
+                        <th>{produto.id}</th>
+                        <td>{produto.produto}</td>
+                        <td>{produto.preco.toFixed(2).replace('.', ',')}</td>
+                    </tr>
+            )
+        })
+    
+    } 
     
     return (
-        <div>
+        <div className="TabelaProdutos">
             <table>
                 <thead>
                     <tr>
@@ -25,7 +29,7 @@ export default function ListaProdutos () {
                     </tr>
                 </thead>                
                 <tbody>
-                        {listaProdutos}
+                        {getLinhas()}
                 </tbody>
             </table>
         </div>
