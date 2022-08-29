@@ -9,6 +9,7 @@ import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProduto from "./components/repeticao/TabelaProduto";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 
 
 export default function App(props) {
@@ -16,6 +17,9 @@ export default function App(props) {
         <div className='App'>
             <h1>Fundamentos React</h1>
             <div className="Cards">
+                <Card titulo="#08 - Condicional Par ou Impar" color="#66CDAA">
+                    <ParOuImpar numero={2} />
+                </Card>
                 <Card titulo="#07 - Desafio Repetição Produtos" color="#DAA520">
                     <TabelaProduto />
                 </Card>
