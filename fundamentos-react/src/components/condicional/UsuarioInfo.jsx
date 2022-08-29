@@ -9,7 +9,7 @@ export default function UsuarioInfo(props) {
     return (
         <div>
             <If test={usuario && usuario.nome} >
-                Seja bem vindo {props.usuario.nome}!
+                Seja bem vindo {usuario.nome }!
             </If>
             <If test={!usuario || !usuario.nome} >
                 Seja bem vindo Pessoa desconhecida!
