@@ -10,6 +10,7 @@ import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProduto from "./components/repeticao/TabelaProduto";
 import ParOuImpar from "./components/condicional/ParOuImpar";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
 
 
 export default function App(props) {
@@ -17,6 +18,10 @@ export default function App(props) {
         <div className='App'>
             <h1>Fundamentos React</h1>
             <div className="Cards">
+                <Card titulo="#09 - Informação condicional" color="#4682B4">
+                    <UsuarioInfo usuario={{nome: 'Fernando'}} />
+                    <UsuarioInfo usuario={{}} />
+                </Card>
                 <Card titulo="#08 - Condicional Par ou Impar" color="#66CDAA">
                     <ParOuImpar numero={2} />
                 </Card>
