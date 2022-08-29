@@ -12,6 +12,7 @@ import TabelaProduto from "./components/repeticao/TabelaProduto";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 
 
 export default function App(props) {
@@ -19,13 +20,16 @@ export default function App(props) {
         <div className='App'>
             <h1>Fundamentos React</h1>
             <div className="Cards">
+                <Card titulo="#11 - Comunicação Indireta" color="#2F4F4F">
+                    <IndiretaPai />
+                </Card>
                 <Card titulo="#10 - Comunicação Direta" color="#556B2F">
                     <DiretaPai />
                 </Card>
                 <Card titulo="#09 - Informação condicional" color="#4682B4">
                     <UsuarioInfo usuario={{nome: 'Fernando'}} />
                     <UsuarioInfo usuario={{}} />
-                    <UsuarioInfo  />
+                    <UsuarioInfo />
                 </Card>
                 <Card titulo="#08 - Condicional Par ou Impar" color="#66CDAA">
                     <ParOuImpar numero={2} />
